@@ -3,6 +3,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import { Button, Snackbar} from "@mui/material";
+import Addcar from "./Addcar";
 
 
 export default function Carlist(){
@@ -88,7 +89,9 @@ export default function Carlist(){
     ];
 
     return(
+        
         <div className="ag-theme-alpine" style={{ height: '700px', width: '100%' }}>
+            <Addcar/>
             <AgGridReact rowData={cars} columnDefs={columns} />
             <Snackbar
                 open={open}
