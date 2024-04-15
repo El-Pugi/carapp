@@ -4,6 +4,7 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import { Button, Snackbar} from "@mui/material";
 import Addcar from "./Addcar";
+import Editcar from "./Editcar";
 
 
 export default function Carlist(){
@@ -91,6 +92,10 @@ export default function Carlist(){
             headerName: 'Price',
             field: 'price',
             filter: true
+        },
+        {
+            width: 100,
+            cellRenderer: row => <Editcar car={row.original}/>
         },
         {
             headerName: 'Delete',
