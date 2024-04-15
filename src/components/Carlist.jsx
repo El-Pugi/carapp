@@ -44,6 +44,18 @@ export default function Carlist(){
                 });
         }
     };
+
+    const saveCar = (car) => {
+        fetch('https://carrestservice-carshop.rahtiapp.fi/cars', {
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify(car)
+        })
+        .then(res => fetchData())
+        .catch(err => console.error(err))
+    }
     
     const handleClose = () => {
         setOpen(false);
@@ -91,7 +103,7 @@ export default function Carlist(){
     return(
         
         <div className="ag-theme-alpine" style={{ height: '700px', width: '100%' }}>
-            <Addcar/>
+            <Addcar saveCar={saveCar}/>
             <AgGridReact rowData={cars} columnDefs={columns} />
             <Snackbar
                 open={open}
