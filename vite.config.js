@@ -4,7 +4,7 @@ import { Environment } from 'ag-grid-community'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/carapp',
+  base: '/carapp/',
   plugins: [react()],
   test: {
     globals: true,

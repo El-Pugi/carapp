@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepade": "https://El-Pugi.github.io/carapp/",
+  "homepage": "https://El-Pugi.github.io/carapp/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
